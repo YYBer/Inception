@@ -1,0 +1,19 @@
+version: '1'
+services:
+	nginx:
+		build: requirments/nginx/
+		container_name: nginx
+		ports:
+			- "80:80"
+			- "443:443"
+		volumes:
+			- "~/Desktop/inception/website:/var/www/html"
+			
+			
+			
+		networks:
+			- frontend
+		restart: always
+		
+networks:
+	frontend:
